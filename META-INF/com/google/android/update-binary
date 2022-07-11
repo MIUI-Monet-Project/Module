@@ -117,7 +117,7 @@ if is_legacy_script; then
   # service scripts
   $LATESTARTSERVICE && cp -af $TMPDIR/service.sh $MODPATH/service.sh
 
-  ui_print "- Setting permissions"
+#  ui_print "- Setting permissions"
   set_permissions
 else
   print_modname

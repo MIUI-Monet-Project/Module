@@ -119,128 +119,50 @@ REPLACE="
 # Enable boot scripts by setting the flags in the config section above.
 ##########################################################################################
 
-MINAPI = 31
-# Check for min/max api version
-check_api() {
-	[ -z $MINAPI ] || { [ $API -lt $MINAPI ] && abort "  Your system API of $API is less than the minimum required api of $MINAPI! Aborting!"; }
-	[ -z $MAXAPI ] || { [ $API -gt $MAXAPI ] && abort "  Your system API of $API is greater than the maximum required api of $MAXAPI! Aborting!"; }
-}
-
-# cleanup extra files & junk after installation
-cleanup() {
-	rm -rf $MODPATH/addon 2>/dev/null
-	rm -rf $MODPATH/common 2>/dev/null
-	rm -f $MODPATH/install.sh 2>/dev/null
-	
-	settings_cache="
-Settings
-MonetSettings
-MiuiSystemUI
-"
-	other_cache="
-Contacts
-MonetContacts
-MiuiSystemUIPlugin
-MonetMiuiSystemUIPlugin
-Mms
-MonetMms
-"
-	dda=/data/dalvik-cache/arm
-	[ -d $dda"64" ] && dda=$dda"64"
-	
-	for i in $settings_cache; do
-		rm -f $dda/system_ext@*@"$i"*
-		rm -f /data/system/package_cache/*/"$i"*
-	done
-	
-	for i in $other_cache; do
-		rm -f $dda/system@*@"$i"*
-		rm -f /data/system/package_cache/*/"$i"*
-	done
-}
-
 # Set what you want to display when installing your module
-
 print_modname() {
-  ui_print "*******************************"
-  ui_print "  MIUI Monet Project"
-  ui_print "  by Geoorg"
-  ui_print "*******************************"
-  ui_print " "
-  ui_print "*******************************"
-  sleep 0.05
-  ui_print "  If you have any bugs or issues,"
-  ui_print "  please report them to"
-  ui_print " "
-  sleep 0.05
-  ui_print "  Telegram User: @geoorg30"
-  sleep 0.05
-  ui_print "  Telegram Group: @MIUIMonet"
-  ui_print " "
-  sleep 0.05
-  ui_print "*******************************"
-  sleep 0.3
-  ui_print " "
+	ui_print " "
+	ui_print "===================================================="
+	ui_print "  MIUI Monet Project"
+	ui_print " "
+	sleep 0.05
+	ui_print "  If you have any bugs or issues, please report to"
+	# ui_print "  please report them to"
+	sleep 0.05
+	ui_print "  Telegram User:  @geoorg30"
+	sleep 0.05
+	ui_print "  Telegram Group: @MIUIMonet"
+	sleep 0.05
+	ui_print "===================================================="
+	sleep 0.3
 }
 
 # Copy/extract your module files into $MODPATH in on_install.
-
 on_install() {
   # The following is the default implementation: extract $ZIPFILE/system to $MODPATH
   # Extend/change the logic to whatever you want
-  ui_print "- Extracting module files"
-  unzip -o "$ZIPFILE" -d $MODPATH >&2
-  ui_print "- Checking requirements"
-  check_api
-  ui_print "- Installing files"
-  
-  . $MODPATH/addon/Volume-Key-Selector/install.sh
-
-    ui_print " "
-    ui_print "- What version for settings app"
-    ui_print "  would you like to install?"
-    ui_print " "
-    ui_print "    1. Default icons"
-    ui_print "    2. Themed icons"
-    ui_print " "
-    ui_print "    Volume up (+) to change version"
-    ui_print "    Volume down (-) to install version"
-    ui_print " "
-    sleep 0.5
-    
-    A=1
-    while true; do
-        case $A in
-            1 ) TEXT="Default icons";;
-            2 ) TEXT="Themed icons";;
-        esac
-        ui_print "    $A. $TEXT"
-        if $VKSEL 60; then
-            A=$((A + 1))
-        else
-            break
-        fi
-        if [ $A -gt 2 ]; then
-            A=1
-        fi
-    done
-    case $A in
-            1 ) Name="default";;
-            2 ) Name="themed";;
-    esac
-
-    sleep 1
-    cp -rf $MODPATH/common/${Name}/MonetSettings.apk $MODPATH/system/product/overlay
-    ui_print " "
-    ui_print "- $TEXT version installed"
+	ui_print " "
+	#  ui_print "- Extracting module files"
+	unzip -o "$ZIPFILE" -d $MODPATH >&2
+	ui_print "- Checking requirements"
+	ui_print " "
+	sleep 1
+	print_specs
+	check_api
+	sleep 1
+	ui_print " "
+	ui_print "- Installing files"
+	install_files
+	sleep 1
 	ui_print "- Cleaning up"
 	cleanup
+	sleep 1
+	print_credits
 }
 
 # Only some special files require specific permissions
 # This function will be called after on_install is done
 # The default permissions should be good enough for most cases
-
 set_permissions() {
   # The following is the default rule, DO NOT remove
   set_perm_recursive $MODPATH 0 0 0755 0644
@@ -253,3 +175,131 @@ set_permissions() {
 }
 
 # You can add more functions to assist your custom script code
+
+
+# Install module files
+install_files() {
+
+	. $MODPATH/addon/Volume-Key-Selector/install.sh
+
+	ui_print " "
+	ui_print "- What version for settings app would you like"
+	ui_print "  to install?"
+	ui_print " "
+	ui_print "    1. Default icons"
+	ui_print "    2. Themed icons"
+	ui_print " "
+	ui_print "    Volume up (+) to change version"
+	ui_print "    Volume down (-) to install version"
+	ui_print " "
+	sleep 0.5
+
+	A=1
+	while true; do
+		case $A in
+			1 ) TEXT="Default icons";;
+			2 ) TEXT="Themed icons";;
+		esac
+		ui_print "    $A. $TEXT"
+		if $VKSEL 60; then
+			A=$((A + 1))
+		else
+			break
+		fi
+		if [ $A -gt 2 ]; then
+			A=1
+		fi
+	done
+	case $A in
+		1 ) Version="default";;
+		2 ) Version="themed";;
+	esac
+
+	sleep 1
+	cp -rf $MODPATH/common/settings/${Version}/MonetSettings.apk $MODPATH/system/product/overlay
+	ui_print " "
+	ui_print "- $TEXT for settings installed"
+}
+
+MINAPI=31
+# Check for min/max api version
+check_api() {
+	[ -z $MINAPI ] || { [ $API -lt $MINAPI ] && abort "  Your system API of $API is less than the minimum required api of $MINAPI! Aborting!"; }
+	[ -z $MAXAPI ] || { [ $API -gt $MAXAPI ] && abort "  Your system API of $API is greater than the maximum required api of $MAXAPI! Aborting!"; }
+}
+
+Manufacturer=$(getprop ro.product.vendor.manufacturer)
+Model=$(getprop ro.product.vendor.model)
+Version=$(getprop ro.build.version.incremental)
+Android=$(getprop ro.build.version.release)
+CPU_ABI=$(getprop ro.product.cpu.abi)
+# output some system spec.
+print_specs() {
+	ui_print "===================================================="
+	sleep 0.05
+	ui_print "- Device:           $Model"
+	sleep 0.05
+   # ui_print "- Manufacturer:     $Manufacturer"
+   # sleep 0.05
+   # ui_print "- ARM Version:      $CPU_ABI"
+   # sleep 0.05
+	ui_print "- SDK Version:      $API"
+	sleep 0.05
+	ui_print "- Android Version:  Android $Android"
+	sleep 0.05
+	ui_print "- Build version:    $Version"
+	ui_print "===================================================="
+	sleep 0.3
+}
+
+# cleanup extra files & junk after installation
+cleanup() {
+	rm -rf $MODPATH/addon 2>/dev/null
+	rm -rf $MODPATH/common 2>/dev/null
+	rm -f $MODPATH/install.sh 2>/dev/null
+	
+	system_ext_cache="
+Settings
+MonetSettings
+MiuiSystemUI
+MonetMiuiSystemUI
+"
+	system_cache="
+Contacts
+MonetContacts
+MiuiSystemUIPlugin
+MonetMiuiSystemUIPlugin
+Mms
+MonetMms
+MiuiHome
+MonetMiuiHome
+FindDevice
+MonetFindDevice
+"
+	dda=/data/dalvik-cache/arm
+	[ -d $dda"64" ] && dda=$dda"64"
+	
+	for i in $system_ext_cache; do
+		rm -f $dda/system_ext@*@"$i"*
+		rm -f /data/system/package_cache/*/"$i"*
+	done
+	
+	for i in $system_cache; do
+		rm -f $dda/system@*@"$i"*
+		rm -f /data/system/package_cache/*/"$i"*
+	done
+}
+
+print_credits() {
+	ui_print " "
+	ui_print "===================================================="
+	ui_print "  If you found this module helpful, please consider"
+	ui_print "  supporting the development."
+	ui_print "  You can donate at https://paypal.me/geoorg"
+	ui_print "  All support is appreciated."
+	ui_print " "
+	ui_print " "
+	ui_print "  Made with ❤️"
+	ui_print "===================================================="
+	sleep 0.3
+}

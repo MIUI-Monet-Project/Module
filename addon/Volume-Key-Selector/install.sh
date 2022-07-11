@@ -15,10 +15,11 @@ chooseport_legacy() {
         elif [ $sel -eq 41 ]; then
             return 1
         elif $error; then
-            abort "Error!"
+    		abort "  No version selected, please restart installation"
+          #  abort "  installation cannot continue"
         else
             error=true
-            echo "Try again!"
+   #         echo "Try again!"
         fi
     done
 }
@@ -37,16 +38,17 @@ chooseport() {
             elif (`grep -q 'KEY_VOLUMEDOWN *DOWN' $TMPDIR/events`); then
                 return 1
             fi
-            [ $count -gt 6  ] && break
+            [ $count -gt 30  ] && break
         done
         if $error; then
-            echo "Trying keycheck method..."
+       #     echo "Trying keycheck method..."
             export chooseport=chooseport_legacy VKSEL=chooseport_legacy
             chooseport_legacy $delay
             return $?
         else
             error=true
-            echo "Volume key not detected, try again!"
+   		 echo " "
+            echo "  Volume key not detected, try again"
         fi
     done
 }
