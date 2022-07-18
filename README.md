@@ -6,7 +6,7 @@
     <img src="https://img.shields.io/badge/Version-v2.0.0-blue.svg?longCache=true&style=popout-square"
       alt="Version" />
   <!-- Last Updated -->
-    <img src="https://img.shields.io/badge/Updated-July 11, 2022-green.svg?longCache=true&style=flat-square"
+    <img src="https://img.shields.io/badge/Updated-July 18, 2022-green.svg?longCache=true&style=flat-square"
       alt="_time_stamp_" />
   <!-- Min Magisk -->
     <img src="https://img.shields.io/badge/MinMagisk-20.4-red.svg?longCache=true&style=flat-square"
@@ -30,3 +30,11 @@
 - Quick Settings Panel
 - Settings
 - Xiaomi Find Device
+- MIUI Security Center
+- MISound
+- MIUI Notification Center
+- MIUI Cloud Backup
+- Xiaomi Cloud
+- Dual Apps
+- Second Space
+- Phone Services

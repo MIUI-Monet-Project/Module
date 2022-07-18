@@ -8,18 +8,33 @@ MODPATH=${0%/*}
 	rm -rf $MODPATH/common 2>/dev/null
 	rm -f $MODPATH/install.sh 2>/dev/null
 	
-	settings_cache="
+	system_ext_cache="
 Settings
-MonetSettings
 MiuiSystemUI
 "
-	other_cache="
+	system_cache="
 Contacts
 MonetContacts
 MiuiSystemUIPlugin
 MonetMiuiSystemUIPlugin
 Mms
 MonetMms
+MiuiHome
+MonetMiuiHome
+FindDevice
+MonetFindDevice
+CloudBackup
+MonetCloudBackup
+CloudService
+MonetCloudService
+MiSound
+MonetMiSound
+NotificationCenter
+MonetNotificationCenter
+SecurityCenter
+MonetSecurityCenter
+MonetMiuiSystemUI
+MonetSettings
 "
 	dda=/data/dalvik-cache/arm
 	[ -d $dda"64" ] && dda=$dda"64"

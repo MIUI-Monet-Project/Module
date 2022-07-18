@@ -1,17 +1,21 @@
-# v1.1.0 - July 11, 2022
+# v2.0.0 - July 18, 2022
 
 ## Highlights
 
-- Support for old Quick Settings Panel
-- Support for MIUI System Launcher
-- Support for Xiaomi Find Device
+- Support for MIUI Security Center
+- Support for MIUI Notification Center
+- Support for MIUI Cloud Backup
+- Support for Xiaomi Cloud
+- Support for MiSound
+- Support for Dual Apps
+- Support for Second Space
+- Support for Phone Services
 
 ## Other changes
 
-- Bug fixes
 - Design improvements
 
-
+---
 
 # Donate
 

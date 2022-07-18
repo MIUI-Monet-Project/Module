@@ -157,6 +157,8 @@ on_install() {
 	ui_print "- Cleaning up"
 	cleanup
 	sleep 1
+	ui_print "- Installation complete"
+	sleep 2
 	print_credits
 }
 
@@ -260,9 +262,7 @@ cleanup() {
 	
 	system_ext_cache="
 Settings
-MonetSettings
 MiuiSystemUI
-MonetMiuiSystemUI
 "
 	system_cache="
 Contacts
@@ -275,6 +275,18 @@ MiuiHome
 MonetMiuiHome
 FindDevice
 MonetFindDevice
+CloudBackup
+MonetCloudBackup
+CloudService
+MonetCloudService
+MiSound
+MonetMiSound
+NotificationCenter
+MonetNotificationCenter
+SecurityCenter
+MonetSecurityCenter
+MonetMiuiSystemUI
+MonetSettings
 "
 	dda=/data/dalvik-cache/arm
 	[ -d $dda"64" ] && dda=$dda"64"

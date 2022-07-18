@@ -169,5 +169,5 @@ cd /
 $BOOTMODE || recovery_cleanup
 rm -rf $TMPDIR
 
-ui_print "- Done"
+#ui_print "- Done"
 exit 0
