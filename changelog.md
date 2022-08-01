@@ -1,4 +1,4 @@
-# v3.0.0 - July 31, 2022
+# v3.0.0 - August 1, 2022
 
 ## Highlights
 
