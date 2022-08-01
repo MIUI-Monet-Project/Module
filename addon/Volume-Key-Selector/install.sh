@@ -49,6 +49,7 @@ chooseport() {
             error=true
    		 echo " "
             echo "  Volume key not detected, try again"
+            echo " "
         fi
     done
 }

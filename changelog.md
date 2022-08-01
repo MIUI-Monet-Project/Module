@@ -1,15 +1,15 @@
-# v2.0.0 - July 18, 2022
+# v3.0.0 - July 31, 2022
 
 ## Highlights
 
-- Support for MIUI Security Center
-- Support for MIUI Notification Center
-- Support for MIUI Cloud Backup
-- Support for Xiaomi Cloud
-- Support for MiSound
-- Support for Dual Apps
-- Support for Second Space
-- Support for Phone Services
+- Support for CN Cleaner
+- Support for Global Cleaner
+- Support for CN File Manager
+- Support for Global File Manager
+- Support for App Battery Saver
+- Support for Screen Time
+- Support for Refresh Rate Settings
+- Support for Nature Notification Sounds
 
 ## Other changes
 

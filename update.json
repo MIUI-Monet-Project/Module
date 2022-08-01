@@ -1,6 +1,6 @@
 {
-  "version": "v2.0.0",
-  "versionCode": 200,
-  "zipUrl": "https://github.com/MIUI-Monet-Project/Module/releases/download/v2.0.0/miui-monet-v2.0.0.zip",
+  "version": "v3.0.0",
+  "versionCode": 300,
+  "zipUrl": "https://github.com/MIUI-Monet-Project/Module/releases/download/v3.0.0/miui-monet-v3.0.0.zip",
   "changelog": "https://raw.githubusercontent.com/MIUI-Monet-Project/Module/main/changelog.md"
 }

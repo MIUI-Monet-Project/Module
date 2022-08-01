@@ -4,47 +4,54 @@
 
 MODPATH=${0%/*}
 
-	rm -rf $MODPATH/addon 2>/dev/null
-	rm -rf $MODPATH/common 2>/dev/null
-	rm -f $MODPATH/install.sh 2>/dev/null
-	
-	system_ext_cache="
-Settings
-MiuiSystemUI
+system_ext_cache="
+    Settings
+    MiuiSystemUI
 "
-	system_cache="
-Contacts
-MonetContacts
-MiuiSystemUIPlugin
-MonetMiuiSystemUIPlugin
-Mms
-MonetMms
-MiuiHome
-MonetMiuiHome
-FindDevice
-MonetFindDevice
-CloudBackup
-MonetCloudBackup
-CloudService
-MonetCloudService
-MiSound
-MonetMiSound
-NotificationCenter
-MonetNotificationCenter
-SecurityCenter
-MonetSecurityCenter
-MonetMiuiSystemUI
-MonetSettings
+system_cache="
+    Contacts
+    MonetContacts
+    MiuiSystemUIPlugin
+    MonetMiuiSystemUIPlugin
+    Mms
+    MonetMms
+    MiuiHome
+    MonetMiuiHome
+    FindDevice
+    MonetFindDevice
+    CloudBackup
+    MonetCloudBackup
+    CloudService
+    MonetCloudService
+    MiSound
+    MonetMiSound
+    NotificationCenter
+    MonetNotificationCenter
+    SecurityCenter
+    MonetSecurityCenter
+    MonetMiuiSystemUI
+    MonetSettings
+	CleanMaster
+	MonetCleanMaster
+	MonetCleanMasterGlobal
+	FileExplorer
+	MIUIFileExplorerGlobal
+	MonetFileExplorer
+	MonetFileExplorerGlobal
 "
-	dda=/data/dalvik-cache/arm
-	[ -d $dda"64" ] && dda=$dda"64"
-	
-	for i in $settings_cache; do
-		rm -f $dda/system_ext@*@"$i"*
-		rm -f /data/system/package_cache/*/"$i"*
-	done
-	
-	for i in $other_cache; do
-		rm -f $dda/system@*@"$i"*
-		rm -f /data/system/package_cache/*/"$i"*
-	done
+cache_path=/data/dalvik-cache/arm
+[ -d $cache_path"64" ] && cache_path=$cache_path"64"
+
+for i in $system_ext_cache; do
+	rm -f $cache_path/system_ext@*@"$i"*
+	rm -f /data/system/package_cache/*/"$i"*
+done
+
+for i in $system_cache; do
+	rm -f $cache_path/system@*@"$i"*
+	rm -f /data/system/package_cache/*/"$i"*
+done
+
+# for APPS in $APP; do
+#  rm -f `find /data/system/package_cache /data/dalvik-cache /data/resource-cache -type f -name *$APPS*`
+# done
