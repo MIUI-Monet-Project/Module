@@ -38,3 +38,11 @@
 - Dual Apps
 - Second Space
 - Phone Services
+- CN Cleaner
+- Global Cleaner
+- CN File Manager
+- Global File Manager
+- App Battery Saver
+- Screen Time
+- Refresh Rate Settings
+- Nature Notification Sounds
