@@ -13,7 +13,7 @@
       alt="_time_stamp_" /></div>
 
 <div align="center">
-  <strong>MIUI Monet Project brings wallpaper-based dynamic theme to MIUI 13 system apps on Android 12.</strong></h3>
+  <strong>MIUI Monet Project brings wallpaper-based dynamic theme to MIUI 13 system apps on Android 12+</strong></h3>
 </div>
 
 
