@@ -3,10 +3,17 @@
 
 <div align="center">
   <!-- Version -->
+<<<<<<< HEAD
     <img src="https://img.shields.io/badge/Version-v4.0.0-blue.svg?longCache=true&style=popout-square"
       alt="Version" />
   <!-- Last Updated -->
     <img src="https://img.shields.io/badge/Updated-August 31, 2022-green.svg?longCache=true&style=flat-square"
+=======
+    <img src="https://img.shields.io/badge/Version-v3.0.0-blue.svg?longCache=true&style=popout-square"
+      alt="Version" />
+  <!-- Last Updated -->
+    <img src="https://img.shields.io/badge/Updated-August 1, 2022-green.svg?longCache=true&style=flat-square"
+>>>>>>> 681550d1f316d2e91acdc14887815afaba528c37
       alt="_time_stamp_" />
   <!-- Min Magisk -->
     <img src="https://img.shields.io/badge/MinMagisk-20.4-red.svg?longCache=true&style=flat-square"
