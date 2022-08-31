@@ -1,6 +1,5 @@
 SKIPUNZIP=1
 SKIPMOUNT=false
-REPLACE=""
 Manufacturer=$(getprop ro.product.vendor.manufacturer)
 Codename=$(getprop ro.product.device)
 Model=$(getprop ro.product.vendor.model)
@@ -168,54 +167,14 @@ cleanup() {
 	rm -rf $MODPATH/addon 2>/dev/null
 	rm -rf $MODPATH/common 2>/dev/null
 	rm -f $MODPATH/install.sh 2>/dev/null
-	
-	system_ext_cache="
-        Settings
-        MiuiSystemUI
-    "
-	system_cache="
-        Contacts
-        MonetContacts
-        MiuiSystemUIPlugin
-        MonetMiuiSystemUIPlugin
-        Mms
-        MonetMms
-        MiuiHome
-        MonetMiuiHome
-        FindDevice
-        MonetFindDevice
-        CloudBackup
-        MonetCloudBackup
-        CloudService
-        MonetCloudService
-        MiSound
-        MonetMiSound
-        NotificationCenter
-        MonetNotificationCenter
-        SecurityCenter
-        MonetSecurityCenter
-        MonetMiuiSystemUI
-        MonetSettings
-		CleanMaster
-		MonetCleanMaster
-		MonetCleanMasterGlobal
-		FileExplorer
-		MIUIFileExplorerGlobal
-		MonetFileExplorer
-		MonetFileExplorerGlobal
-    "
-	cache_path=/data/dalvik-cache/arm
-	[ -d $cache_path"64" ] && cache_path=$cache_path"64"
-	
-	for i in $system_ext_cache; do
-		rm -f $cache_path/system_ext@*@"$i"*
-		rm -f /data/system/package_cache/*/"$i"*
-	done
-	
-	for i in $system_cache; do
-		rm -f $cache_path/system@*@"$i"*
-		rm -f /data/system/package_cache/*/"$i"*
-	done
+
+    OVERLAYS="`ls $MODPATH/system/product/overlay`"
+    
+    for OVERLAY in $OVERLAYS; do
+        rm -f `find /data/system/package_cache -type f -name *$OVERLAY*`
+        rm -f `find /data/dalvik-cache -type f -name *$OVERLAY*.apk`
+    done
+
 }
 
 set_permissions() {
@@ -228,6 +187,7 @@ print_credits() {
 	ui_print "  If you found this module helpful, please consider"
 	ui_print "  supporting the development."
 	ui_print "  You can donate at https://paypal.me/geoorg"
+	ui_print "  or buymeacoffee at https://buymeacoffee.com/geoorg"
 	ui_print "  All support is appreciated."
 	ui_print " "
 	ui_print " "

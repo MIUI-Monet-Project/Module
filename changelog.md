@@ -1,15 +1,11 @@
-# v3.0.0 - August 1, 2022
+# v4.0.0 - August 31, 2022
 
 ## Highlights
 
-- Support for CN Cleaner
-- Support for Global Cleaner
-- Support for CN File Manager
-- Support for Global File Manager
-- Support for App Battery Saver
-- Support for Screen Time
-- Support for Refresh Rate Settings
-- Support for Nature Notification Sounds
+- Support for Screen Recorder
+- Support for Sound Recorder
+- Support for MIUI Package Installer
+- Support for Permissions Manager
 
 ## Other changes
 
