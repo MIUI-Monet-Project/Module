@@ -1,4 +1,4 @@
-SKIPUNZIP=1
+SKIPUNZIP=0
 SKIPMOUNT=false
 Manufacturer=$(getprop ro.product.vendor.manufacturer)
 Codename=$(getprop ro.product.device)
@@ -7,6 +7,7 @@ Build=$(getprop ro.build.version.incremental)
 Android=$(getprop ro.build.version.release)
 CPU_ABI=$(getprop ro.product.cpu.abi)
 MIUI=$(getprop ro.miui.ui.version.code)
+MODVER=`grep_prop version $MODPATH/module.prop`
 MINMIUI=13
 MINSDK=31
 MAXSDK=0
@@ -15,7 +16,7 @@ MAXSDK=0
 print_modname() {
 	ui_print " "
 	ui_print "===================================================="
-	ui_print "  MIUI Monet Project"
+	ui_print "  MIUI Monet Project $MODVER"
 	ui_print " "
 	sleep 0.05
 	ui_print "  If you have any bugs or issues, please report to"
@@ -34,7 +35,7 @@ install_files() {
     . $MODPATH/addon/Volume-Key-Selector/install.sh
 
 	ui_print " "
-	ui_print "- What version for settings app would you like"
+	ui_print "- What version for Settings app would you like"
 	ui_print "  to install?"
 	ui_print " "
 	ui_print "    1. Default icons"
@@ -67,18 +68,18 @@ install_files() {
 	sleep 1
 	cp -rf $MODPATH/common/Settings/${Version}/MonetSettings.apk $MODPATH/system/product/overlay
 	ui_print " "
-	ui_print "- $TEXT for settings installed"
+	ui_print "- $TEXT for Settings app installed"
 	
 	cleaner=$(pm list packages com.miui.cleanmaster 2>&1)
-	if [ -n $cleaner ]
+	if [ ! -z $cleaner ]
 	    then
         ui_print " "
-        ui_print "- Installing for CN Cleaner";
+        ui_print "- Installing for China Cleaner";
         cp -rf $MODPATH/common/Cleaner/MonetCleanMaster.apk $MODPATH/system/product/overlay
     fi
 
     cleaner=$(pm list packages com.miui.cleaner 2>&1)
-	if [ -n $cleaner ]
+	if [ ! -z $cleaner ]
 	    then
         ui_print " "
         ui_print "- Installing for Global Cleaner";
@@ -86,15 +87,15 @@ install_files() {
     fi
 
     fileexplorer=$(pm list packages com.android.fileexplorer 2>&1)
-	if [ -n $fileexplorer ]
+	if [ ! -z $fileexplorer ]
 	    then
         ui_print " "
-        ui_print "- Installing for CN File Manager";
+        ui_print "- Installing for China File Manager";
         cp -rf $MODPATH/common/FileExplorer/MonetFileExplorer.apk $MODPATH/system/product/overlay
     fi
 
     fileexplorer=$(pm list packages com.mi.android.globalFileexplorer 2>&1)
-	if [ -n $fileexplorer ]
+	if [ ! -z $fileexplorer ]
 	    then
         ui_print " "
         ui_print "- Installing for Global File Manager";
@@ -167,6 +168,7 @@ cleanup() {
 	rm -rf $MODPATH/addon 2>/dev/null
 	rm -rf $MODPATH/common 2>/dev/null
 	rm -f $MODPATH/install.sh 2>/dev/null
+	rm -f $MODPATH/LICENSE 2>/dev/null
 
     OVERLAYS="`ls $MODPATH/system/product/overlay`"
     
@@ -199,9 +201,7 @@ print_credits() {
 # main installer
 run_install() {
 	ui_print " "
-	#  ui_print "- Extracting module files"
-	unzip -o "$ZIPFILE" -x 'META-INF/*' -d $MODPATH >&2
-	#unzip -o "$ZIPFILE" -d $MODPATH >&2
+#	unzip -o "$ZIPFILE" -x 'META-INF/*' -d $MODPATH >&2
 	print_modname
 	sleep 1
     ui_print " "

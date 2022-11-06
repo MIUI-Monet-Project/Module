@@ -1,15 +1,14 @@
-# v4.0.0 - August 31, 2022
+# v5.0.0 - November 06, 2022
 
 ## Highlights
 
-- Support for Screen Recorder
-- Support for Sound Recorder
-- Support for MIUI Package Installer
-- Support for Permissions Manager
+- Support for Calculator
+- Support for Clock
+- Support for Xiaomi Account
 
 ## Other changes
 
-- Design improvements
+- Design improvements, updates & fixes
 
 ---
 
