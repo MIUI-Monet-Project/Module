@@ -1,7 +1,7 @@
 id=MIUIMonetProject
 name=MIUI Monet Project
-version=v5.0.0
-versionCode=500
+version=v6.0.0
+versionCode=600
 author=Geoorg
-description=MIUI Monet Project brings wallpaper-based dynamic theme to MIUI 13 system apps on Android 12+. Requires Magisk 24.0+
+description=Material You wallpaper-based dynamic theme for MIUI system apps on Android 12+. Requires Magisk 24.0+
 updateJson=https://raw.githubusercontent.com/MIUI-Monet-Project/Module/main/update.json

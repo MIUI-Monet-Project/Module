@@ -66,10 +66,32 @@ install_files() {
 		2 ) Version="Themed";;
 	esac
 	sleep 1
-	cp -rf $MODPATH/common/Settings/${Version}/MonetSettings.apk $MODPATH/system/product/overlay
+	if [ $Version -eq 'Default' ]
+	    then
+	    cp -rf $MODPATH/common/Settings/${Version}/MonetSettings.apk $MODPATH/system/product/overlay
+    else
+	    cp -rf $MODPATH/common/Settings/${Version}/MIUI${MIUI}/MonetSettings.apk $MODPATH/system/product/overlay
+    fi
+            
 	ui_print " "
 	ui_print "- $TEXT for Settings app installed"
 	
+	aod=$(pm list packages com.miui.aod 2>&1)
+	if [ ! -z $aod ]
+	    then
+        ui_print " "
+        ui_print "- Installing for Always-on display";
+        cp -rf $MODPATH/common/MonetMiuiAod.apk $MODPATH/system/product/overlay
+    fi
+
+	mirror=$(pm list packages com.xiaomi.mirror 2>&1)
+	if [ ! -z $mirror ]
+	    then
+        ui_print " "
+        ui_print "- Installing for MIUI+";
+        cp -rf $MODPATH/common/MonetMirror.apk $MODPATH/system/product/overlay
+    fi
+
 	cleaner=$(pm list packages com.miui.cleanmaster 2>&1)
 	if [ ! -z $cleaner ]
 	    then
@@ -179,11 +201,6 @@ cleanup() {
 
 }
 
-set_permissions() {
-	# The following is the default rule, DO NOT remove
-	set_perm_recursive $MODPATH 0 0 0755 0644
-}
-
 print_credits() {
 	ui_print "===================================================="
 	ui_print "  If you found this module helpful, please consider"
@@ -217,7 +234,6 @@ run_install() {
 	sleep 0.5
 	install_files
 	sleep 1
-#	set_permissions
     ui_print " "
 	ui_print "- Installation complete"
     sleep 1

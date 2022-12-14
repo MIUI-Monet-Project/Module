@@ -1,10 +1,13 @@
-# v5.0.0 - November 06, 2022
+# v6.0.0 - December 14, 2022
 
 ## Highlights
 
-- Support for Calculator
-- Support for Clock
-- Support for Xiaomi Account
+- Support for Miui+
+- Support for Mi Share
+- Support for Miui AOD
+- Support for Miui Weather
+- Support for Miui Screenshot
+- Support for MiLinkService (Mi Smart Hub, Cast)
 
 ## Other changes
 
