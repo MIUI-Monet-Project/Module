@@ -25,12 +25,18 @@
 - Clock
 - Calculator
 - Control Center
+- Miui+
+- MiLinkService (Mi Smart Hub, Cast)
+- Mi Share
 - MIUI Dialer and Contacts
 - MIUI System Launcher
+- Miui Screenshot
+- Miui Weather
 - MIUI Messaging
 - Quick Settings Panel
 - Settings
 - Xiaomi Find Device
+- Miui AOD
 - MIUI Security Center
 - MISound
 - MIUI Notification Center
@@ -52,9 +58,3 @@
 - MIUI Package Installer
 - Permissions Manager
 - Xiaomi Account
-- Miui+
-- Mi Share
-- Miui AOD
-- Miui Weather
-- Miui Screenshot
-- MiLinkService (Mi Smart Hub, Cast)
