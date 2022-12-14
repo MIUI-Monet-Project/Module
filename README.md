@@ -3,24 +3,16 @@
 
 <div align="center">
   <!-- Version -->
-<<<<<<< HEAD
-    <img src="https://img.shields.io/badge/Version-v4.0.0-blue.svg?longCache=true&style=popout-square"
+    <img src="https://img.shields.io/badge/Version-v6.0.0-blue.svg?longCache=true&style=popout-square"
       alt="Version" />
   <!-- Last Updated -->
-    <img src="https://img.shields.io/badge/Updated-August 31, 2022-green.svg?longCache=true&style=flat-square"
-=======
-    <img src="https://img.shields.io/badge/Version-v3.0.0-blue.svg?longCache=true&style=popout-square"
-      alt="Version" />
-  <!-- Last Updated -->
-    <img src="https://img.shields.io/badge/Updated-August 1, 2022-green.svg?longCache=true&style=flat-square"
->>>>>>> 681550d1f316d2e91acdc14887815afaba528c37
-      alt="_time_stamp_" />
+    <img src="https://img.shields.io/badge/Updated-December 14, 2022-green.svg?longCache=true&style=flat-square" alt="_time_stamp_" />
   <!-- Min Magisk -->
     <img src="https://img.shields.io/badge/MinMagisk-20.4-red.svg?longCache=true&style=flat-square"
       alt="_time_stamp_" /></div>
 
 <div align="center">
-  <strong>MIUI Monet Project brings wallpaper-based dynamic theme to MIUI 13 system apps on Android 12+</strong></h3>
+  <strong>MIUI Monet Project brings wallpaper-based dynamic theme to MIUI system apps on Android 12+</strong></h3>
 </div>
 
 
@@ -30,6 +22,8 @@
 - MIUI 13 xiaomi.eu ROM
 
 ### What's currently themed
+- Clock
+- Calculator
 - Control Center
 - MIUI Dialer and Contacts
 - MIUI System Launcher
@@ -57,3 +51,10 @@
 - Sound Recorder
 - MIUI Package Installer
 - Permissions Manager
+- Xiaomi Account
+- Miui+
+- Mi Share
+- Miui AOD
+- Miui Weather
+- Miui Screenshot
+- MiLinkService (Mi Smart Hub, Cast)
