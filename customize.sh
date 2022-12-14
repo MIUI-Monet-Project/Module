@@ -66,7 +66,7 @@ install_files() {
 		2 ) Version="Themed";;
 	esac
 	sleep 1
-	if [ $Version -eq 'Default' ]
+	if [ $Version == 'Default' ]
 	    then
 	    cp -rf $MODPATH/common/Settings/${Version}/MonetSettings.apk $MODPATH/system/product/overlay
     else
