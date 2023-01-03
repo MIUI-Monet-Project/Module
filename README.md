@@ -17,9 +17,9 @@
   <br /><br />
    <a href="https://telegra.ph/Whats-Currently-Themed-11-06"><img src="https://img.shields.io/badge/Themed App-List-blue?longCache=true&style=for-the-badge"
       alt="Themed Apps List" /></a>
-   <a href="https://t.me/@MIUIMonetUpdate"><img src="https://img.shields.io/badge/telegram-channel-blue?longCache=true&style=for-the-badge&logo=telegram&logoColor=white"
+   <a href="https://t.me/MIUIMonetUpdate"><img src="https://img.shields.io/badge/telegram-channel-blue?longCache=true&style=for-the-badge&logo=telegram&logoColor=white"
       alt="Telegram Channel" /></a>
-   <a href="https://t.me/@MIUIMonet"><img src="https://img.shields.io/badge/telegram-discuss-blue?longCache=true&style=for-the-badge&logo=telegram&logoColor=white"
+   <a href="https://t.me/MIUIMonet"><img src="https://img.shields.io/badge/telegram-discuss-blue?longCache=true&style=for-the-badge&logo=telegram&logoColor=white"
       alt="Telegram Channel" /></a>
 
 </h2>
