@@ -1,13 +1,11 @@
-# v6.0.0 - December 14, 2022
+# v8.0.0 - April 1, 2023
+
+First ever free releases after awhile! 🎉
 
 ## Highlights
-
-- Support for Miui+
-- Support for Mi Share
-- Support for Miui AOD
-- Support for Miui Weather
-- Support for Miui Screenshot
-- Support for MiLinkService (Mi Smart Hub, Cast)
+- Support for Bluetooth
+- Support for Global Calendar
+- Themed more pop-ups & dialogs
 
 ## Other changes
 
