@@ -1,4 +1,4 @@
-![MIUI Monet Project](https://github.com/MIUI-Monet-Project/.github/blob/main/profile/Monet%20Updates%20(1).png?raw=true)
+![MIUI Monet Project](https://github.com/MIUI-Monet-Project/.github/blob/main/profile/Monet%20Proj%20New%20Logo.png?raw=true)
 <h1 align="center">MIUI Monet Project</h1>
 
 <div align="center">
@@ -13,7 +13,7 @@
 </div>
 
 <h2 align="center">
-  <a href="https://telegra.ph/README-08-31">README first before installing</a>
+  <a href="https://telegra.ph/Read-Me-01-19">README first before installing</a>
   <br /><br />
    <a href="https://telegra.ph/Whats-Currently-Themed-11-06"><img src="https://img.shields.io/badge/Themed App-List-blue?longCache=true&style=for-the-badge"
       alt="Themed Apps List" /></a>
