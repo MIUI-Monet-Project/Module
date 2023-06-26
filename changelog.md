@@ -1,21 +1,23 @@
-# v8.0.0 - April 1, 2023
+# v10.0.0 - June 24, 2023
 
-First ever free releases after awhile! 🎉
+## Anniversary Update 🎉🎉🎉
 
 ## Highlights
-- Support for Bluetooth
-- Support for Global Calendar
-- Themed more pop-ups & dialogs
+- Support for Gallery
+- Support for Camera
+- Support for Compass
+- Support for Miui Backup
+- Support for YellowPages
+- Support for Gallery Editor
+- Support for POCO Launcher
+- Support for Mi Input Settings
+- Support for System Apps Updater
 
 ## Other changes
-
+- Amoled Dark Mode
+- New Control Center UI
 - Design improvements, updates & fixes
 
 ---
-
-# Donate
-
-If you found this module helpful, please consider supporting the development, [**you can buy me a coffee**](https://paypal.me/geoorg). All support is appreciated.
-
 
 Made with ❤️

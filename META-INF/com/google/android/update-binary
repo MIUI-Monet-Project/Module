@@ -6,28 +6,99 @@
 
 umask 022
 
+# Global vars
+TMPDIR=/dev/tmp
+PERSISTDIR=/sbin/.magisk/mirror/persist
+
+rm -rf $TMPDIR 2>/dev/null
+mkdir -p $TMPDIR
+
 # echo before loading util_functions
 ui_print() { echo "$1"; }
 
 require_new_magisk() {
   ui_print "*******************************"
-  ui_print " Please install Magisk v20.4+! "
+  ui_print " Please install Magisk v24.0+! "
   ui_print "*******************************"
   exit 1
 }
 
-#########################
-# Load util_functions.sh
-#########################
+##############
+# Environment
+##############
 
 OUTFD=$2
 ZIPFILE=$3
 
 mount /data 2>/dev/null
 
+# Load utility functions
 [ -f /data/adb/magisk/util_functions.sh ] || require_new_magisk
 . /data/adb/magisk/util_functions.sh
 [ $MAGISK_VER_CODE -lt 20400 ] && require_new_magisk
 
-install_module
+# Preperation for flashable zips
+setup_flashable
+
+# Mount partitions
+mount_partitions
+
+# Detect version and architecture
+api_level_arch_detect
+
+# Setup busybox and binaries
+$BOOTMODE && boot_actions || recovery_actions
+
+##############
+# Preparation
+##############
+
+# Extract prop file
+unzip -o "$ZIPFILE" module.prop -d $TMPDIR >&2
+[ ! -f $TMPDIR/module.prop ] && abort "! Unable to extract zip file!"
+
+$BOOTMODE && MODDIRNAME=modules_update || MODDIRNAME=modules
+MODULEROOT=$NVBASE/$MODDIRNAME
+MODID=`grep_prop id $TMPDIR/module.prop`
+MODPATH=$MODULEROOT/$MODID
+MODNAME=`grep_prop name $TMPDIR/module.prop`
+
+# Create mod paths
+rm -rf $MODPATH 2>/dev/null
+mkdir -p $MODPATH
+
+##########
+# Install
+##########
+
+unzip -o "$ZIPFILE" customize.sh -d $MODPATH >&2
+
+  if ! grep -q '^SKIPUNZIP=1$' $MODPATH/customize.sh 2>/dev/null; then
+    unzip -o "$ZIPFILE" -x 'META-INF/*' -d $MODPATH >&2
+
+    # Default permissions
+    set_perm_recursive $MODPATH 0 0 0755 0644
+  fi
+
+# Load customization script
+[ -f $MODPATH/customize.sh ] && . $MODPATH/customize.sh
+
+# Handle replace folders
+for TARGET in $REPLACE; do
+  ui_print "- Replace target: $TARGET"
+  mktouch $MODPATH$TARGET/.replace
+done
+
+# Remove stuffs that don't belong to modules
+rm -rf \
+$MODPATH/system/placeholder $MODPATH/customize.sh \
+$MODPATH/README.md $MODPATH/.git* 2>/dev/null
+
+##############
+# Finalizing
+##############
+
+cd /
+$BOOTMODE || recovery_cleanup
+rm -rf $TMPDIR
 exit 0

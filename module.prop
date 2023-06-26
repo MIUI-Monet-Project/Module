@@ -1,7 +1,6 @@
 id=MIUIMonetProject
-name=MIUI Monet Project
-version=v6.0.0
-versionCode=600
-author=Geoorg
+name=MIUI Monet Project (Anniversary Update 🎉🎉🎉)
+version=v10.0.0
+versionCode=1000
+author=MIUI Monet Team
 description=Material You wallpaper-based dynamic theme for MIUI system apps on Android 12+. Requires Magisk 24.0+
-updateJson=https://raw.githubusercontent.com/MIUI-Monet-Project/Module/main/update.json

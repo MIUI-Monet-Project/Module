@@ -15,7 +15,7 @@ chooseport_legacy() {
         elif [ $sel -eq 41 ]; then
             return 1
         elif $error; then
-    		abort "  No version selected, please restart installation"
+    		abort "  No option selected, please restart installation"
           #  abort "  installation cannot continue"
         else
             error=true
