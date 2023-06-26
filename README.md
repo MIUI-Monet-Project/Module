@@ -6,7 +6,7 @@
   <a href="https://github.com/MIUI-Monet-Project/Module/releases"><img src="https://img.shields.io/github/v/release/miui-monet-project/module?color=green&include_prereleases&logo=magisk&logoColor=white&style=for-the-badge"
                                                                        alt="Latest Version" /></a>
   <!-- Last Updated -->
-  <img src="https://img.shields.io/github/release-date/miui-monet-project/module?style=for-the-badge" alt="_time_stamp_" />
+<!--  <img src="https://img.shields.io/github/release-date/miui-monet-project/module?style=for-the-badge" alt="_time_stamp_" /> -->
   <!-- Min Magisk -->
   <img src="https://img.shields.io/badge/Min Magisk-20.4-red.svg?longCache=true&style=for-the-badge"
       alt="Min Magisk v20.4" />
