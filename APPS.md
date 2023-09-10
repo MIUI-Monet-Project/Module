@@ -1,6 +1,6 @@
 # What's Currently Themed
 
-<br/><br/><br/><br/>
+<br/><br/>
 
 ## System UI Related
 
