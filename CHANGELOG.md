@@ -3,6 +3,16 @@
 All Notable changes will be documented in this file.
 <br/><br/>
 
+# v11.0.0 - September 10, 2023
+
+#### Highlights
+- New Cards UI
+
+#### Other changes
+- Design improvements, updates & fixes
+  
+  <br/><br/>
+  
 # v10.0.0 - June 24, 2023
 
 ### Anniversary Update 🎉🎉🎉
