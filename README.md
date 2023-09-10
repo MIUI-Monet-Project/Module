@@ -1,4 +1,4 @@
-![MIUI Monet Project](https://github.com/MIUI-Monet-Project/.github/blob/main/profile/Monet%20Proj%20New%20Logo.png?raw=true)
+![MIUI Monet Project](https://github.com/MIUI-Monet-Project/.github/blob/main/profile/banner.jpg?raw=true)
 <h1 align="center">MIUI Monet Project</h1>
 <div align="center">
   <strong>MIUI Monet Project brings wallpaper-based dynamic theme to MIUI system apps on Android 12+</strong>
