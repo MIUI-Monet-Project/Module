@@ -71,3 +71,7 @@
 - MIUI Notes
 - MiLinkService / MIUI Cast
 - MIUI Screenshot
+- MIUI Gallery
+- MIUI Gallery Editor
+- MIUI Extra Photo (Bokeh)
+- Theme Manager (CN & Global)
