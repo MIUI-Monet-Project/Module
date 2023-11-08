@@ -47,6 +47,7 @@
 - Find Phone
 - Xiaomi Cloud
 - Mi Sound
+- Mi Input settings (gesture shortcuts)
 - MIUI+
 
 <br/><br/>
