@@ -3,6 +3,21 @@
 All Notable changes will be documented in this file.
 <br/><br/>
 
+# v12.0.0 - November 08, 2023
+
+#### Highlights
+- Support for CN Theme Manager
+- Support for Global Theme Manager
+- Support for Global File Manager (New UI)
+- Support for MIUI Extra Photo (Bokeh)
+
+#### Other changes
+- Added compatibility with HyperOS system apps
+- Dropped support for Global Fiile Manager (Old UI)
+- Design improvements, updates & fixes
+  
+  <br/><br/>
+
 # v11.0.0 - September 10, 2023
 
 #### Highlights
