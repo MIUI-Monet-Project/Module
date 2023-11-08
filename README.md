@@ -53,6 +53,7 @@ Please see [Themed apps](APPS.md) list for more information.
 - To switch between default and themed icons, reflash the module and select a version.
 - If possible, **please use the default theme or MIUI Monet Project companion theme only because some themes can overwrite the Module** and some heavily modified themes **can crash your phone.**
 - **We won’t support custom icons & custom Control Center layouts from custom MIUI ROMs / modules**.
+- HyperOS users, turn off **advanced textures** in **settings > display & brightness** if you have weird background in control center.
 
 <br/><br/>
 
@@ -78,7 +79,7 @@ Please see [Themed apps](APPS.md) list for more information.
 
 ## Experimental UI Options
 
-MIUI Monet Project has new experimental UI options that enable new control center background but it's quite unstable and might not work well with certain versions of the SystemUI Plugin. Below are steps to apply the experimental UI:
+HyperOS Monet Project has new experimental solid background UI options that enable control center background but it's quite unstable and might not work well with certain versions of the SystemUI Plugin. Below are steps to apply the experimental solid background UI:
 
-- Apply the status bar section of the MIUI Monet theme on MIUI Themes app
+- Apply the status bar section of the HyperOS Monet theme on MIUI Themes app
 - Restart SystemUI after switching to light/dark mode or changing the wallpaper
