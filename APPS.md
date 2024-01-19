@@ -7,6 +7,7 @@
 - Control Center
 - Classic Quick Settings
 - MIUI Notification Center
+- Floating Windows
 
 <br/><br/>
 
@@ -49,6 +50,9 @@
 - Mi Sound
 - Mi Input settings (gesture shortcuts)
 - MIUI+
+- Feedback
+- Services & Feedback
+- Permission Controller (Global)
 
 <br/><br/>
 
@@ -76,3 +80,4 @@
 - MIUI Gallery Editor
 - MIUI Extra Photo (Bokeh)
 - Theme Manager (CN & Global)
+- MIUI Scanner
