@@ -3,6 +3,20 @@
 All Notable changes will be documented in this file.
 <br/><br/>
 
+# v13.0.0 - January 19, 2023
+
+## Highlights
+- Support for Scanner
+- Support for Feedback
+- Support for Floating windows
+- Support for Services & feedback
+- Support for Global Permission controller
+
+## Other changes
+- Added compatibility with HyperOS system apps
+- Dropped support for Global File Manager (Old UI)
+- Design improvements, updates & fixes
+
 # v12.0.0 - November 08, 2023
 
 #### Highlights
