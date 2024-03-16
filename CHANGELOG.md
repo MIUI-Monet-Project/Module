@@ -3,6 +3,19 @@
 All Notable changes will be documented in this file.
 <br/><br/>
 
+# v14.0.0 - March 16, 2023
+
+## Highlights
+- Support for Frequent Phrases (aka Enhanced Keyboard)
+- Support for Mail app
+
+## Other changes
+- Cards UI for HyperOS (Premium)
+- New MD3 toggles style (Premium)
+- Themed more system dialogs & menus
+- Reduce package size & file optimization
+- Design improvements, updates & fixes
+
 # v13.0.0 - January 19, 2023
 
 ## Highlights
