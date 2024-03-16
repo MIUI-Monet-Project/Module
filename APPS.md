@@ -13,16 +13,17 @@
 
 ## Communications Related
 
-- MIUI Dialer 
-- MIUI Incall UI
-- MIUI Contacts
-- MIUI Messaging
+- MIUI / HyperOS Dialer 
+- MIUI / HyperOS Incall UI
+- MIUI / HyperOS Contacts
+- MIUI / HyperOS Messaging
+- MIUI / HyperOS Mail
 
 <br/><br/>
 
 ## Launcher Related
 
-- MIUI Launcher
+- MIUI / HyperOS Launcher
 - China App Vault
 - Global App Vault
 
@@ -30,16 +31,16 @@
 
 ## Settings Related
 
-- MIUI Settings
+- MIUI / HyperOS Settings
 - App Battery Saver
 - Refresh Rate Settings
-- MIUI Screen Time
-- MIUI Dual Apps
+- MIUI / HyperOS Screen Time
+- MIUI / HyperOS Dual Apps
 - Second Space
-- MIUI Phone Services
+- MIUI / HyperOS Phone Services
 - Nature Notification Sounds
 - Permission Manager
-- MIUI AOD
+- MIUI / HyperOS AOD
 - Bluetooth
 - Quick Ball
 - MIUI Updater
@@ -49,35 +50,36 @@
 - Xiaomi Cloud
 - Mi Sound
 - Mi Input settings (gesture shortcuts)
-- MIUI+
+- MIUI+ / Interconnectivity Services
 - Feedback
 - Services & Feedback
 - Permission Controller (Global)
+- Frequent Phrases (aka Enhanced Keyboard)
 
 <br/><br/>
 
 ## MIUI Security app Related
 
-- MIUI Security Center
+- MIUI / HyperOS Security Center
 - Cleaner app (CN & Global)
 
 <br/><br/>
 
-## Others MIUI System Apps
+## Others MIUI / HyperOS System Apps
 
 - File Manager (CN & Global)
 - Screen Recorder 
 - Sound Recorder
-- MIUI Package Installer
-- MIUI Calculator
-- MIUI Clock
-- MIUI Weather
-- MIUI Calendar
-- MIUI Notes
-- MiLinkService / MIUI Cast
-- MIUI Screenshot
-- MIUI Gallery
-- MIUI Gallery Editor
-- MIUI Extra Photo (Bokeh)
+- MIUI / HyperOS Package Installer
+- MIUI / HyperOS Calculator
+- MIUI / HyperOS Clock
+- MIUI / HyperOS Weather
+- MIUI / HyperOS Calendar
+- MIUI / HyperOS Notes
+- MiLinkService / MIUI / HyperOS Cast
+- MIUI / HyperOS Screenshot
+- MIUI / HyperOS Gallery
+- MIUI / HyperOS Gallery Editor
+- MIUI / HyperOS Extra Photo (Bokeh)
 - Theme Manager (CN & Global)
-- MIUI Scanner
+- MIUI / HyperOS Scanner
