@@ -6,7 +6,7 @@
 
 - Control Center
 - Classic Quick Settings
-- MIUI Notification Center
+- MIUI / HyperOS Notification Center
 - Floating Windows
 
 <br/><br/>
@@ -76,6 +76,7 @@
 - MIUI / HyperOS Weather
 - MIUI / HyperOS Calendar
 - MIUI / HyperOS Notes
+- MIUI / HyperOS Mail
 - MiLinkService / MIUI / HyperOS Cast
 - MIUI / HyperOS Screenshot
 - MIUI / HyperOS Gallery
@@ -83,3 +84,6 @@
 - MIUI / HyperOS Extra Photo (Bokeh)
 - Theme Manager (CN & Global)
 - MIUI / HyperOS Scanner
+- Mi Video
+- Mi Drive
+- Mi Wallpaper Carousel (CN & Global)
