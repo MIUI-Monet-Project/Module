@@ -3,7 +3,21 @@
 All Notable changes will be documented in this file.
 <br/><br/>
 
-# v14.0.0 - March 16, 2023
+# v15.0.0 - May 24, 2024
+
+## Highlights
+- Support for Mi Drive
+- Support for Mi Video (Global)
+- Support for Mi Wallpaper Carousel (CN)
+- Support for Mi Wallpaper Carousel (Global)
+
+## Other changes
+- Dropped support for calculator version < 15
+- Weird background in third-party apps fixed
+- Design improvements, updates & more fixes
+
+
+# v14.0.0 - March 16, 2024
 
 ## Highlights
 - Support for Frequent Phrases (aka Enhanced Keyboard)
@@ -16,7 +30,7 @@ All Notable changes will be documented in this file.
 - Reduce package size & file optimization
 - Design improvements, updates & fixes
 
-# v13.0.0 - January 19, 2023
+# v13.0.0 - January 19, 2024
 
 ## Highlights
 - Support for Scanner
