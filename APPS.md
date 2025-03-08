@@ -40,7 +40,7 @@
 - MIUI / HyperOS Phone Services
 - Nature Notification Sounds
 - Permission Manager
-- MIUI / HyperOS AOD
+- MIUI / HyperOS AOD (Lockscreen Customization)
 - Bluetooth
 - Quick Ball
 - MIUI Updater
@@ -55,6 +55,14 @@
 - Services & Feedback
 - Permission Controller (Global)
 - Frequent Phrases (aka Enhanced Keyboard)
+- Taplus
+- Mi Accessibility
+- AI Call Assistant
+- Application Extension Service
+- SIM Toolkit
+- Wake with Voice
+- Xiaomi HyperAI Engine
+- Third party app problems
 
 <br/><br/>
 
@@ -82,8 +90,13 @@
 - MIUI / HyperOS Gallery
 - MIUI / HyperOS Gallery Editor
 - MIUI / HyperOS Extra Photo (Bokeh)
+- Hyper Phone
 - Theme Manager (CN & Global)
 - MIUI / HyperOS Scanner
 - Mi Video
 - Mi Drive
 - Mi Wallpaper Carousel (CN & Global)
+- Mi Music Player (Global)
+- Xiaomi AI Translate
+- Voice Call Recorder
+
